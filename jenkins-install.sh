@@ -1,12 +1,12 @@
-echo "Download Jenkins Repo file"
+echo -e "\e[35m>>>>>>>>>Download Jenkins Repo file <<<<<<<<\e[0m"
 curl -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-echo "\n Download jenkins key file"
+echo " Download jenkins key file"
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-echo "\n Install Java"
+echo " Install Java"
 yum install fontconfig java-11-openjdk -y
-echo "\n Install Jenkins"
+echo " Install Jenkins"
 yum install jenkins -y
-echo "\n Enable Jenkins"
+echo " Enable Jenkins"
 systemctl enable jenkins
-echo "\n Start jenkins"
+echo " Start jenkins"
 systemctl start jenkins
